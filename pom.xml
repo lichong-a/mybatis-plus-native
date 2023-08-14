@@ -21,8 +21,6 @@
         <skipTests>true</skipTests>
 
         <!-- 项目依赖 -->
-        <spring.cloud.version>2022.0.4</spring.cloud.version>
-        <spring.cloud.alibaba.version>2022.0.0.0</spring.cloud.alibaba.version>
         <mybatis-plus.version>3.5.3.2</mybatis-plus.version>
         <mybatis-spring-boot.version>3.0.2</mybatis-spring-boot.version>
         <springdoc.version>2.1.0</springdoc.version>
