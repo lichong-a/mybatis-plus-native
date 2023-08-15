@@ -11,8 +11,6 @@ spring:
     password: test
   sql:
     init:
-      schema-locations: classpath:db/schema-h2.sql
-      data-locations: classpath:db/data-h2.sql
       mode: always
 logging:
   level:

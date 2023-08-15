@@ -5,7 +5,6 @@ import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
 import lombok.extern.slf4j.Slf4j;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -16,8 +15,7 @@ import java.net.UnknownHostException;
 import java.util.Objects;
 
 @Slf4j
-@SpringBootApplication
-@MapperScan({"work.lichong.test"})
+@SpringBootApplication(proxyBeanMethods = false)
 @OpenAPIDefinition(
         info = @Info(title = "MybatisPlusNative",
                 version = "dev",
