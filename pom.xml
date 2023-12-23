@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.5</version>
+        <version>3.2.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>work.lichong</groupId>
@@ -21,12 +21,12 @@
         <skipTests>true</skipTests>
 
         <!-- 项目依赖 -->
-        <mybatis-plus.version>3.5.4</mybatis-plus.version>
-        <springdoc.version>2.1.0</springdoc.version>
+        <mybatis-plus.version>3.5.4.1</mybatis-plus.version>
+        <springdoc.version>2.3.0</springdoc.version>
         <graal-sdk.version>23.0.0</graal-sdk.version>
 
         <!-- Plugins -->
-        <native.maven.plugin.version>0.9.23</native.maven.plugin.version>
+        <native.maven.plugin.version>0.9.28</native.maven.plugin.version>
     </properties>
     <dependencies>
         <dependency>
@@ -49,6 +49,17 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
             <version>${mybatis-plus.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>mybatis-spring</artifactId>
+                    <groupId>org.mybatis</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <artifactId>mybatis-spring</artifactId>
+            <groupId>org.mybatis</groupId>
+            <version>3.0.3</version>
         </dependency>
         <!-- h2驱动 -->
         <dependency>
@@ -67,6 +78,7 @@
             <groupId>org.graalvm.sdk</groupId>
             <artifactId>graal-sdk</artifactId>
             <version>${graal-sdk.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
