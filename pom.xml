@@ -23,10 +23,10 @@
         <!-- 项目依赖 -->
         <mybatis-plus.version>3.5.5</mybatis-plus.version>
         <springdoc.version>2.3.0</springdoc.version>
-        <graal-sdk.version>23.0.0</graal-sdk.version>
+        <graal-sdk.version>22.3.5</graal-sdk.version>
 
         <!-- Plugins -->
-        <native.maven.plugin.version>0.9.28</native.maven.plugin.version>
+        <native.maven.plugin.version>0.10.0</native.maven.plugin.version>
     </properties>
     <dependencies>
         <dependency>

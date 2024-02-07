@@ -17,4 +17,9 @@ public class TestController {
     public String test() {
         return userService.getById(1L).toString();
     }
+
+    @GetMapping("/test2")
+    public String test2() {
+        return userService.getAllUser().toString();
+    }
 }
